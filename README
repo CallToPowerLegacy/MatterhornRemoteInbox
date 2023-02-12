@@ -1,0 +1,49 @@
+==================================
+| Matterhorn Remote Inbox - MHRI |
+==================================
+
+
+Description
+-----------
+The Matterhorn Remote Inbox (MHRI) is a tool which simplifies the collaboration between external hardware and the Opencast Matterhorn Project.
+
+MHRI provides the option to register an arbitrary main directory, which is then, including every contained and future files and directories, being watched.
+The sub-directories get the status of an "Inbox" which stands for a series in Matterhorn.
+Every change of one of the inboxes is being registered. When e.g. a new recording has been created - that means a new directory has been created in one of the inboxes - the new recording will be marked for later upload and processing after no new changes occurred.
+MHRI has an easy-to-use user interface. Among other features the status of the recordings on the machine and on the server are being displayed. Besides there are functions for planning, stopping and repeating the process and for the creation of new series on the server. Workflows can be assigned and different editors (such as episode editor and flavor editor) can be used.
+
+The Matterhorn Remote Inbox qualifies to work together with TheRec Matterhorn. TheRec Matterhorn is able to record videos synchronously from multiple sources. When TheRec Matterhorn directly records into one of the Inboxes, all changes will be registered and uploaded by MHRI after the recording has finished.
+
+MHRI was developed by the currently active developer Denis Meyer and the former developer Benjamin Wulff. Organizations behind: ELAN e.V, virtUOS, University of Osnabrueck.
+
+
+Version
+-------
+x.y.z
+1.8.0
+
+Authors
+-------
+Active
+- Denis Meyer ( calltopower88@gmail.com )
+Former
+- Benjamin Wulff
+
+3rd-Party
+---------
+- Apache Felix licensed under the Apache License 2.0 ( http://felix.apache.org/license.html )
+
+
+---------------------------------
+|         Requirements          |
+---------------------------------
+
+- Oracle Java 8 JRE or higher
+- Windows 7, Windows 8 (This software has been developed for the Windows Operating System. Other operating systems have not been sufficiently tested.)
+
+
+---------------------------------
+|     Server requirements       |
+---------------------------------
+
+Opencast Matterhorn version 1.3.x, 1.4.x, 1.5.x or 1.6.x

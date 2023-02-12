@@ -1,0 +1,49 @@
+﻿==================================
+| Matterhorn Remote Inbox - MHRI |
+==================================
+
+
+Beschreibung
+------------
+Die Matterhorn Remote Inbox (MHRI) ist ein Hilfsmittel, welches die Zusammenarbeit von externer Hardware und dem Opencast Matterhorn-Projekt deutlich vereinfacht.
+
+MHRI bietet die Möglichkeit, ein beliebiges Haupt-Verzeichnis zu registrieren, welches anschließend inklusive aller enthaltenen und zukünftigen Dateien und Verzeichnisse überwacht wird.
+Die Unterverzeichnisse bekommen den Status einer "Inbox" zugewiesen und stehen jeweils für eine Serie in Matterhorn.
+Alle Änderungen an einer der Inboxen werden registriert. Wurde beispielsweise eine neue Aufzeichnung angelegt, d.h. ein neues Verzeichnis in einer der Inboxen erstellt, wird die neue Aufzeichnung, sobald keine weiteren Änderungen mehr registriert werden, zum späteren Hochladen und Verarbeiten markiert.
+MHRI stellt hierfür eine einfach zu bedienende grafische Nutzer-Oberfläche zur Verfügung. Unter anderem wird der Status der Aufzeichnungen auf dem Rechner und auf dem Server angezeigt. Auch sind neben Funktionen zur Planung, zum Stoppen und zum Wiederholen eines Prozesses weitere Funktionen wie das Anlegen einer neuen Serie auf dem Server oder das Zuweisen eines Workflows und verschiedene Editoren (Episoden-Editor,  Flavor-Editor) vorhanden.
+
+Die Matterhorn Remote Inbox eignet sich zur Zusammenarbeit mit TheRec Matterhorn. TheRec Matterhorn kann Videos von mehreren Quellen gleichzeitig synchron aufnehmen. Stellt man in den Einstellungen von TheRec Matterhorn ein, dass direkt in das überwachte Verzeichnis aufgenommen werden soll, werden alle Änderungen von MHRI registriert und direkt im Anschluss hochgeladen.
+
+MHRI wurde vom aktuell aktiven Entwickler Denis Meyer und dem ehemaligen Entwickler Benjamin Wulff entwickelt. Die Organisationen dahinter: ELAN e.V. , virtUOS, Universität Osnabrück.
+
+
+Version
+-------
+x.y.z
+1.8.0
+
+Autoren
+--------
+Aktiv
+- Denis Meyer ( calltopower88@gmail.com )
+Ehemalig
+- Benjamin Wulff
+
+3rd-Party
+---------
+- Apache Felix licensed under the Apache License 2.0 ( http://felix.apache.org/license.html )
+
+
+---------------------------------
+|        Voraussetzungen        |
+---------------------------------
+
+- Oracle Java 8 JRE oder höher
+- Windows 7, Windows 8 (Diese Software wurde für das Windows Betriebssystem entwickelt. Andere Betriebssysteme sind nicht genügend getestet worden.)
+
+
+---------------------------------
+|    Server-Voraussetzungen     |
+---------------------------------
+
+Opencast Matterhorn Version 1.3.x, 1.4.x, 1.5.x oder 1.6.x

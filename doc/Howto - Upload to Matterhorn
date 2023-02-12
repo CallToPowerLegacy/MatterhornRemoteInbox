@@ -1,0 +1,61 @@
+Matterhorn Upload (for Matterhorn 1.4 or higher)
+------------------------------------------------
+
+-- How to upload to Matterhorn
+
+1. Create new mediapackage
+	GET /ingest/createMediaPackage
+	200: OK, Returns media package
+	500: Internal Server Error, NONE
+2. Add tracks -- files that are not catalogs
+	1. Generate job ID -- for every new track upload job
+		POST /upload/newjob
+		filename: The name of the file that will be uploaded
+		filesize: The size of the file that will be uploaded
+		chunksize: The size of the chunks that will be uploaded
+		flavor: The flavor of this track
+		mediapackage: The mediapackage the file should belong to
+		200: OK, job was successfully created 
+		204: No Content, upload service gave an error
+		Return value description: The ID of the newly created upload job
+	2. Upload chunks
+		1.1 Upload all chunks
+			POST /upload/job/{jobID}
+			chunknumber: The number of the current chunk
+			filedata: The payload
+			200: OK, the chunk data was successfully appended to file on server
+			400: Bad Request, the request was malformed
+			404: Not Found, the upload job was not found
+		1.2 To check whether uploading/finished/etc.
+			1.	GET /upload/job/{jobID}.{format:xml|json}
+				200: OK, the job was successfully retrieved. 
+				404: Not Found, the job was not found.
+				Return value description: The XML representation of the requested upload job
+			2. Parse state
+				States: READY, INPROGRESS, FINALIZING, COMPLETE
+			3. If INPROGRESS: Upload is in progress, do not upload next chunk
+			4. Else: Upload next chunk
+	2. Wait for upload job finalizing
+		1. While not state equals COMPLETE: Wait
+	3. Add track -- for every file successfully uploaded to get the updated media package
+		POST /mediapackage/addTrack
+		mediapackage: the mediapackage to change
+		trackUri: the URI to the new track
+		flavor: the flavor of the track
+		200: OK, Mediapackage was manipulated successfully 
+		500: Internal Server Error, something went wrong
+		Return value description: Returns the new Mediapackage
+3. Add catalogs (e.g. series.xml, episode.xml)
+	1. Add catalog -- for every file successfully uploaded to get the updated media package
+		POST /ingest/addDCCatalog
+		mediaPackage: The media package as XML 
+		dublinCore: DublinCore catalog as XML
+		flavor(Default value=dublincore/episode): DublinCore Flavor [optional]
+		200: OK, Returns augmented media package 
+		500: Internal Server Error, NONE
+		Returns augmented media package
+4. Start processing -- after uploading all files
+	POST /ingest/ingest/{wdID}, wdID = Workflow definition id
+	mediaPackage: The media package XML
+	200: OK, Returns the media package 
+	400: Bad Request, NONE

@@ -1,0 +1,72 @@
+==================================
+| Matterhorn Remote Inbox - MHRI |
+==================================
+
+---------------------------------
+|            Compiling          |
+---------------------------------
+
+Build Requirements
+------------------
+- Oracle Java 8 JDK
+- Maven
+(- optional: IDE (Netbeans, Eclipse, ...))
+
+Overview: OSGi bundles
+----------------------
+- Application
+	- Matterhorn Remote Inbox controller logic
+	- Loads configurations for directories
+	- Observes directories via DirectoryWatch
+	- Ingests media files via Ingest
+- DirectoryWatch
+	- Observes a specific directory via the Java Watch Service API
+- Ingest
+	- Ingests media files to a Matterhorn server
+	- Uploads in chunks
+- Utilities
+	- Bundle activator
+	- Parsing of configuration files
+- UI
+	- Provides a graphical user interface for the Matterhorn Remote Inbox
+- Log Sender
+	- Sends log files to a specified log server
+- Updater
+	- Checks for updates at a specified update server
+
+Build/deploy
+------------
+- create a folder named 'application' in "MHRI"
+
+Manually:
+- mvn clean install -DdeployTo=/path/to/MHRI/application
+
+Netbeans:
+- Right click the imported maven project
+- Select "Properties"
+- Select "Actions"
+- Change the values "Build project" and "Clean and Build project" to respectively
+	- Windows OS:
+		- deployTo=Drive:\\path\\to\\MHRI\\application
+	- UNIX-like OS:
+		- deployTo=/path/to/MHRI/application
+
+Making available
+----------------
+- compile the bundles
+- create new folder named "mhri-x.y.z"
+- change to folder "mhri-x.y.z":
+	- create new folder "doc"
+		- change to folder "doc":
+			- copy "doc/Licenses/*" -> "doc/Licenses/*"
+			- copy "doc/Changelog" -> "doc/Changelog"
+			- copy "doc/Changelog_de" -> "doc/Changelog_de"
+			- copy "doc/manual/en/Manual.pdf" -> "doc/Manual.pdf"
+			- copy "doc/manual/ger/Bedienungsanleitung.pdf" -> "doc/Bedienungsanleitung.pdf"
+	- copy folder "MHRI" -> "mhri-x.y.z"
+	- copy "README" -> "README"
+	- copy "README_ger" -> "README_ger"
+	- copy "scripts/install.bat" -> "install.bat"
+	- copy "scripts/uninstall.bat" -> "uninstall.bat"
+	- change to folder "bundle"
+		- remove all bundles starting with "org.apache.felix.gogo"

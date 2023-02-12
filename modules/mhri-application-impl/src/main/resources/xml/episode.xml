@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dublincore xmlns="http://www.opencastproject.org/xsd/1.0/dublincore/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dcterms:identifier>TMPL_ID</dcterms:identifier>
+    <dcterms:created xsi:type="dcterms:W3CDTF">TMPL_CREATED</dcterms:created>
+    <dcterms:title>TMPL_TITLE</dcterms:title>
+</dublincore>

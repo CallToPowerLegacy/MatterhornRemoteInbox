@@ -1,0 +1,285 @@
+==================================
+| Matterhorn Remote Inbox - MHRI |
+==================================
+
+-------------
+| Changelog |
+-------------
+
+
+Version 1.8.0
+-------------
+20/03/2015
+Neue Features:
+- Java 1.8-Unterstützung
+- Bibliotheken-Upgrade
+- Abhängigkeiten zum Opencast-Projekt entfernt
+
+
+Version 1.6.3
+-------------
+02/10/2014
+Bugfixes:
+- Nicht erkannte Dateien stoppen den Upload
+- Inboxes mit keiner Aufzeichnung konnten nicht gelöscht werden
+- Der Runnable Conductor hat sich manchmal aufgehängt
+Neue Features:
+- Ein Klick zum Hochladen oder Stoppen des Hochladevorgangs der ganzen Serie
+
+
+Version 1.6.2
+-------------
+25/09/2014
+Neue Features:
+- Serien-Informationen werden in der Aufzeichnungs-Darstellung angezeigt
+
+
+Version 1.6.1
+-------------
+24/06/2014
+Neue Features:
+- Vor dem Upload wird ueberprüft, ob die aktuell zugewiesene Serie auf dem Server vorhanden ist. Ist der Name gleich und unterscheidet sich die ID, werden dem Nutzer verschiedene Lösungsmöglichkeiten angeboten
+- Strings wurden Matterhorn angepasst
+
+
+Version 1.6.0
+-------------
+16/06/2014
+Bugfixes:
+- Wenn der Port in den Einstellungen geändert wurde, wurde er nicht gespeichert
+- Aktualisierungs-UI wurde nicht angezeigt, wenn per Hand nach Aktualisierungen gesucht wurde
+- Verschiedene Sicherheits-Aktualisierungen
+- Datenbank-Fixes
+- Die Aufzeichnungs-Benutzeroberfläche wird nun automatisch aktualisiert, wenn eine Datei angelegt/modifiziert/gelöscht wurde
+- Die Aufzeichnungs-Benutzeroberfläche wird nun automatisch aktualisiert, wenn eine andere Inbox gewählt wurde
+- Wenn der Status manuell von Completed zu Idle gewechselt wurde, wurde die Statusanzeige nicht automatisch aktualisiert
+Neue Features:
+- Benutzeroberflächen aktualisiert
+- Zeitformat in der Episoden-Benutzeroberfläche lesbarer gemacht
+- Die Zeit im Episoden-Editor wird nun automatisch von UTC zu lokaler Zeit konvertiert
+- Einstellungs-Import und -Export zur Einstellungs-Benutzeroberfläche hinzugefügt
+- Aufzeichnungen werden alphanumerisch sortiert
+- Serien werden alphanumerisch sortiert
+- Performance-Verbesserungen
+- Stabilitäts-Verbesserungen
+
+
+Version 1.5.1
+-------------
+19/02/2014
+Neue Features:
+- "Öffne Verzeichnis"-Option zu den Kontextmenüs hinzugefügt
+
+
+Version 1.5.0
+-------------
+14/11/2013
+Bugfixes:
+- "Flickern" in der Inboxen UI entfernt
+- Temporäre Dateien wurden nicht ordnungsgemäß gelöscht
+- Einige kleinere Fehler wurden behoben
+- Hochladen stoppt, wenn Server Chunks nicht verarbeiten kann
+- Instantiated-Server-Status hinzugefügt
+Neue Features:
+- Grafischer Windows-Installer
+- Internationalisierung/Lokalisierung: Englisch, Deutsch
+- Episoden-Editor
+- Verbessertes Memory-Management
+- Verbesserter Ausgaben
+
+
+Version 1.4.0
+-------------
+05/11/2013
+Bugfixes:
+- Wenn noch keine Log-Datei vorhanden war und es versucht wurde, die Log-Datei zu versenden, wurde ein Fehler angezeigt
+- Verschiedene kleinere Bugfixes
+- Korrumpierte Datenbank verursacht Anwengungs-Crash
+- Warten auf Aufzeichnungen, die gerade empfangen werden, hat nicht immer funktioniert bei großen Dateien
+- Workflow-Definitions-ID wurde nicht sofort aktualisiert, nachdem sie in den Einstellungen geändert wurde
+Neue Features:
+- Stabilere und Crash-resistentere Kern-Anwendung
+	- Neustarten der Anwendung nach einer Einstellungsänderung ist nicht mehr notwendig
+	- Datenbank wird zurückgesetzt, wenn sie korrumpiert ist
+	- Status der Aufzeichnungen werden überprüft, um Fehler zu vermeiden
+	- Interne Verbesserungen (z.B. Memory-Management, Ausnahmebehandlung, Tests)
+- Workflow
+	- Definitionen-Übersicht (vom Server heruntergeladen)
+	- Auswahl pro Inbox oder pro Aufzeichnung, wenn kein Workflow ausgewählt wurde wird ein einstellbarer Default-Workflow genommen
+- Serien-Editor
+- Flavor-Editor
+- UI-Aktualisierungen
+	- Gesamte UI vereinfacht
+	- Öffnen einer erfolgreich hochgeladene Aufzeichnung im Browser
+	- Server-Status-Anzeige nach erfolgreichem Upload
+	- Szenen-Erkennungs-Option neben Trim-Option hinzugefügt
+	- "Mark as", Aufzeichnungen als completed, idle oder failed markieren
+	- Filter für Aufzeichnungen nach dessen Status
+	- User-Dialog ob ein bekannter Flavor zu einer Aufzeichnung mit unbekanntem Flavor hinzugefügt werden soll
+	- Serien werden sortiert angezeigt
+	- Workflows werden sortiert angezeigt
+	- Aktualisierung der Icons
+	- Kontext-Menus hinzugefügt
+	- Einstellung der Anzahl von Versuchen zum wiederholten Hochladen fehlgeschlagener Aufzeichnungen
+	- Einstellung für einen automatischen Update-Check hinzugefügt
+	- Zurücksetzen-Option für einige der Einstellungen hinzugefügt
+	- Erster-Start-Dialog hinzugefügt
+	- Status-Anzeige, nachdem die Einstellungen geändert wurden
+	- Anzeige, dass Serien-Informationen geändert wurden und eines Reset-Knopfes
+	- Anzahl der hochzuladenen Dateien und Groesse dieser werden angezeigt
+	- Mehr Details über die Upload-Datei (Datei, Größe, Chunk-Nummer) werden angezeigt
+	- Warnung
+		- bei Änderungen der Einstellungen wenn gerade Jobs laufen
+		- bei Änderung des Haupt-Verzeichnisses in den Einstellungen
+		- bei Upload-Versuch von leeren Aufzeichnungen
+		- bei Upload-Versuch von Aufzeichnungen mit nicht-einzigartigen Flavors
+		- bei Upload-Versuch von schon erfolgreich hochgeladenen Aufzeichnungen
+		- bei Markierungs-Versuch von schon erfolgreich hochgeladenen Aufzeichnungen
+		- bei Datenbank-Fehler + -Reset
+- Automatische Planung von fehlgeschlagenen Aufzeichnungen plus eine Einstellungs-Option, um das Feature zu aktivieren und deaktivieren, Standard auf aktiviert gesetzt
+- Install- und Uninstall-Skript aktualisiert
+- Standby- und Hibernate-Einstellungen zum Install-Skript hinzugefügt
+- Mehr Variablen in der Konfigurationsdatei
+
+
+Version 1.3.1
+-------------
+29/7/2013
+Bugfixes:
+- Einige seltene Datenbank-Fehler beseitigt
+- Die Dublin Core XML-Datei wurde in manchen Fällen nicht mit hochgeladen
+- Aufzeichnungen hatten in manchen Fällen den Status IDLE anstatt von COMPLETED
+
+
+Version 1.3.0
+-------------
+18/7/2013
+Bugfixes:
+- Geplante Uploads konnten erst im Upload-Status abgebrochen werden
+- Viele Bugs bezüglich Stabilität und allgemeiner Verbesserung
+- Erkennung, wann eine Datei noch am Schreiben ist und wenn das Kopieren beendet wurde
+Neue Features:
+- MHRI Update-Überprüfer, sucht bei Programmstart und alle paar Stunden nach Updates
+- Check-for-Update-Tray-Icon
+- Aktualisierte und größere Grafiken
+- Recording-Anzeige unterscheidet zwischen Normal und Trim im Status Scheduled
+- MHRI-Schlüssel für jede Installation
+- Schlüssel-Import und -Export (im About-UI)
+- Log-Ausgaben in eine Log-Datei und in die Konsole
+- Log-Dateien können nun zum MHRI log server hochgeladen werden
+
+
+Version 1.2.1
+-------------
+4/7/2013
+Bugfixes:
+- Keine doppelten Inboxen
+- Keine doppelten Aufzeichnungen
+- Keine doppelten Aufzeichnungs-Dateien
+
+
+Version 1.2.0
+-------------
+1/7/2013
+Bugfixes:
+- Alle Verbindungen werden ordentlich geschlossen
+- Nebenläufige (geplante) Uploads sind nun möglich; neu: Ein Controller, der die einzelnen Ingests kontrolliert
+- Löschen von Inboxen
+- Löschen von Aufzeichnungen
+- Sicherstellung, dass eine Default Inbox beim Start vorhanden ist
+- Reparierter MH 1.3-Upload
+Neue Features:
+- Mit vielen Optionen erweiterte Einstellungen
+- Aktualisierte und nun konsistente UIs
+- Check zur Anzeige von Aufzeichnungs-Aktions-Buttons, um die auszublenden, welche momentan nicht erlaubt sind
+- "Sofortiger-Upload"-Buttons entfernt (es sollen nur noch die "Plane-Upload"-Buttons benutzt werden)
+- Verbesserte Ausnahmebehandlung im Application-Service
+
+
+Version 1.1.4
+-------------
+28/6/2013
+Bugfixes:
+- Es werden keine unsichtbaren Datein mehr getrackt
+- MHRI ist nicht vernünftig gestart, nachdem es per Autostart gestartet, dann beendet und dann per Hand gestartet wurde: Es konnten keine Daten geladen werden
+Neue Features:
+- Netzwerkstatusanzeige integriert
+- Verbesserte Ausnahmebehandlung im Ingest-Service
+
+
+Version 1.1.3
+-------------
+11/6/2013
+Bugfixes:
+- Der Upload stoppt komplett, wenn "Stop" gedrückt wurde
+Neue Features:
+- Installationsprozess vereinfacht: Alte Versionen werden vor der Installation automatisch gelöscht
+- Zu den Bedienungsanleitungen hinzugefügt, wie man Java konfiguriert
+
+
+Version 1.1.2
+-------------
+20/5/2013
+Bugfixes:
+- Anzeigestatus korrekt mit einer größeren Anzahl an Chunks
+- Die Chunk-Größe kann in den grafischen Einstellungen gespeichert werden
+Neue Features:
+- Check, ob aktuell eine andere Instanz läuft
+- Anzeigestatus zeigt eine Prozentanzeige an
+- Die Upload-Methode (In Chunks (1.4) oder in eins (1.3)) ist auswählbar; kann in den grafischen Einstellungen gespeichert werden
+- Der Chunk, welcher gerade hochgeladen wird und die Anzahl an Chunks werden neben dem Namen der Datei, welche gerade hochgeladen wird, angezeigt, wenn der Upload in Chunks ausgewählt ist
+
+
+Version 1.1.1
+-------------
+18/2/2013
+Bugfixes:
+- Nach dem Download einer Series (oder der Neuerstellung einer Episoden-Datei) wurde die neu angelegte Datei in einen separaten Ordner (genau wie andere Dateien) verschoben
+- Nachfrage, wenn Exit beim Serie-Auswahl-Dialog geklickt wird, ob der Nutzer die alte Serie ersetzen möchte
+- Bedienungsanleitungen aktualisiert, Changelog hinzugefügt
+Neue Features:
+- Windows 8-kompatibel
+- Trim hold-State nun verfügbar
+- Inbox-Informationen (+ Series-Informationen) nun verfügbar
+- Download bis zu 100 Serienlisten-IDs nun verfügbar (vorher nur standardmäßig 25)
+- Geändertes About-Fenster-Design, Link zu Icon-Set hinzugefügt
+- Wenn Enter in einem der Felder in den Einstellungen gedrückt wird, werden die Änderungen gespeichert
+
+
+Version 1.1.0
+-------------
+25/9/2012
+Bugfixes:
+- Verbesserte Stabilität und verbesserte Ausnahmebehandlung
+- "Create inbox" verhält sich nun normal ohne erforderlichen Neustart, wenn das Hauptverzeichnis geändert wurde
+- Die Iconliste ist nun nicht mehr verschiebbar
+- Der Tray-Icon-Doppelklick, um die Inboxen anzuzeigen, wurde gegen einen Einfach-Klick ersetzt
+- Verbesserte Installations- und Deinstallations-Skripte mit klaren Benachrichtigungen für den Nutzer
+- Verbessertes README und verbesserte Benutzerhandbücher
+Neue Features:
+- Unterstützung für den Upload zu Matterhorn Version 1.3 zuzüglich zu Matterhorn Version 1.4+
+- Neue Option, um auszuwählen, ob MHRI als Service oder als Programm gestartet werden soll
+- Neue Funktion: "Delete Inbox"
+- Neue Funktion: "Delete Recording"
+- Desktop-Link hinzugefügt, um MHRI vom Desktop aus zu starten
+- Verschiebung einer Datei, welche nicht in einem Ordner in einer Inbox ist in einen neu erstellten Ordner in der Inbox
+
+
+Version 1.0.1
+-------------
+12/9/2012
+Bugfixes:
+- Verbesserte Netzwerkausnahmebehandlung
+- Installations- und Deinstallations-Skripte aktualisiert und eine Informationsnachricht hinzugefügt
+- Eingeschränkte Button-Verfügbarkeit (z.B. kann man nicht mehr "Delete Inbox" anklicken, wenn gerade eine Aufzeichnung ausgewählt ist)
+- Ränder im UI geändert
+- "Date-Bug" behoben
+- Verbessertes README und verbesserte Benutzerhandbücher
+- Ein Fallback für einen Matterhorn Version 1.4-REST-Endpoint hinzugefügt
+Neue Features:
+- Die verschiedenen Status im UI wurden eingefärbt
+
+
+Version 1.0.0
+-------------
+9/8/2012

@@ -1,0 +1,212 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.calltopower.mhri</groupId>
+    <artifactId>base</artifactId>
+    <packaging>pom</packaging>
+    <version>1.8.0</version>
+    <name>Matterhorn Remote Inbox (MHRI)</name>
+    <description>A desktop application for automatic and manual upload of media files to Opencast Matterhorn</description>
+  
+    <prerequisites>
+        <maven>2.0.6</maven>
+    </prerequisites>
+  
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <checkstyle.skip>true</checkstyle.skip>
+    </properties>
+  
+    <profiles>
+        <profile>
+            <id>full</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>modules/mhri-util</module>
+                <module>modules/mhri-directorywatch-api</module>
+                <module>modules/mhri-directorywatch-impl</module>
+                <module>modules/mhri-ingestclient-api</module>
+                <module>modules/mhri-ingestclient-impl</module>
+                <module>modules/mhri-application-api</module>
+                <module>modules/mhri-application-impl</module>
+                <module>modules/mhri-gui</module>
+                <module>modules/mhri-updater</module>
+                <module>modules/mhri-logsender</module>
+            </modules>
+        </profile>
+    </profiles>
+  
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+      
+            <!-- Require Java 8 or higher for building -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+      
+            <!-- Deploy OSGi bundles to a container -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-to-felix</id>
+                        <phase>install</phase>
+                        <configuration>
+                            <target if="deployTo">
+                                <copy file="${project.build.directory}/${project.build.finalName}.jar" todir="${deployTo}"
+                                      failonerror="false" />
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+    
+        </plugins>
+    
+        <pluginManagement>
+            <plugins>
+        
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-scr-plugin</artifactId>
+                    <version>1.20.0</version>
+                    <executions>
+                        <execution>
+                            <id>generate-scr-scrdescriptor</id>
+                            <goals>
+                                <goal>scr</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+        
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+        
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+        
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>2.5.3</version>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <instructions>
+                            <Bundle-Category>MHRI</Bundle-Category>
+                            <Bundle-Vendor>CallToPower Software</Bundle-Vendor>
+                            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        </instructions>
+                    </configuration>
+                </plugin>
+        
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.9</version>
+                </plugin>
+        
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version>3.4</version>
+                </plugin>
+        
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+        
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+      
+            <!-- OSGi -->
+      
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.core</artifactId>
+                <version>4.3.1</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.compendium</artifactId>
+                <version>4.3.1</version>
+                <scope>provided</scope>
+            </dependency>
+      
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.9.10</version>
+            </dependency>
+            
+            <!-- Testing -->
+      
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+      
+        </dependencies>
+    </dependencyManagement>
+  
+    <!-- All non-build related project data below here -->
+
+    <organization>
+        <name>CallToPower Software</name>
+        <url>https://sites.google.com/site/calltopowersoftware</url>
+    </organization>
+  
+    <developers>
+        <developer>
+            <id>denmeyer</id>
+            <name>Denis Meyer</name>
+            <email>calltopower88@gmail.com</email>
+            <organization>CallToPower Software</organization>
+            <organizationUrl>https://sites.google.com/site/calltopowersoftware</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+    </developers>
+  
+</project>

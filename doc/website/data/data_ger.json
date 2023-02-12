@@ -1,0 +1,478 @@
+{
+    "translations": {
+        "information": "Informationen",
+        "news": "Neuigkeiten",
+        "features": "Eigenschaften",
+        "download": "Download",
+        "faq_short": "FAQ",
+        "faq": "Frequently Asked Questions (FAQ)",
+        "register": "Registrierung",
+        "contact": "Kontakt",
+        "loading": "Am Laden",
+        "systemRequirements": "System-Voraussetzungen",
+        "serverRequirements": "Server-Voraussetzungen",
+        "changelog": "Changelog",
+        "oldVersions": "Alte Versionen",
+        "eula": "EULA",
+        "name": "Name",
+        "organization": "Organisation",
+        "subject": "Betreff",
+        "mhriKey": "MHRI-Key",
+        "send": "Senden",
+        "str_eula": "Mit dem Download einer der Versionen akzeptieren Sie die EULA"
+    },
+	"newsalert": "20/03/2015: Version 1.8.0 veröffentlicht. <a href='#download'>Jetzt herunterladen</a>.",
+	"faq": [
+        {
+			"question": "Wie kann ich meinen MHRI-Key finden?",
+			"answer": "<ol><li>Rechtsklicke auf das MHRI Tray-Icon</li><li>Klicke auf About</li><li>Kopiere den angezeigten Key</li></ol>"
+		},
+        {
+			"question": "Wie kann ich von einer anderen Version aktualisieren?",
+			"answer": "Update von einer Version kleiner 1.5.x: <ol><li>Dies ist nicht möglich, da die Datenbankstruktur verändert wurde.</li></ol>Update von 1.5.x: <ol><li>Im MHRI-Config-Verzeichnis (C:\\…\\mhri-1.y.x\\conf) die Datei 'mhri.properties' sichern</li><li>[optional] Das MHRI-Datenbank-Verzeichnis (C:\\…\\mhri-1.y.x\\database) sichern</li><li>MHRI deinstallieren (über die Systemsteuerung - 'Programme deinstallieren')</li><li>Eine aktuelle Version von MHRI <a href='#download'>herunterladen</a></li><li>Entzippen und dem Setup folgen</li><li>[optional] Vor dem ersten Start das gesicherte MHRI-Datenbank-Verzeichnis im MHRI-Verzeichnis (C:\\…\\MHRI\\1.6.x\\App) zurücksichern</li><li>Einstellungen via Einstellungs-Benutzeroberfläche importieren</li></ol>Update von 1.6.x: <ol><li>Einstellungen via Einstellungs-Benutzeroberfläche exportieren</li><li>[optional] Das MHRI-Datenbank-Verzeichnis (C:\\…\\MHRI\\1.6.x\\App\\database) sichern</li><li>MHRI deinstallieren (über die Systemsteuerung - 'Programme deinstallieren')</li><li>Eine aktuelle Version von MHRI <a href='#download'>herunterladen</a></li><li>Entzippen und dem Setup folgen</li><li>[optional] Vor dem ersten Start das gesicherte MHRI-Datenbank-Verzeichnis im MHRI-Verzeichnis (C:\\…\\MHRI\\1.6.x\\App) zurücksichern</li><li>Einstellungen via Einstellungs-Benutzeroberfläche importieren</li></ol>"
+		},
+        {
+			"question": "MHRI startet nach einer Aktualisierung nicht mehr, was kann ich unternehmen?",
+			"answer": "Checken sie die folgenden Dinge: <ol><li>Haben Sie die korrekte Java-version installiert? Java 8 wird benötigt.</li><li>Läuft eine andere Version von MHRI im Hintergrund? Diese muss beendet werden.</li><li>Den Cache-Ordner löschen</li></ol> Wenn Ihnen das nicht geholfen hat: <ul><li>Direkt nach der Installation (Computer nicht neu hochfahren) nicht nur den Inhalt von 'database' übertragen, sondern auch die Dateien 'mhri.config' von der älteren Version (d.h. nicht die Config via die Einstellungsoberfläche importieren)</li></ul>"
+		}
+	],
+    "downloadMetadata" : {
+        "systemRequirements": [
+            "Oracle Java 8 JRE",
+            "Windows 7, Windows 8 (Windows-Setup)",
+            "Jede Plattform, die Java 8 unterstützt (Verschiedene Plattformen)"
+        ],
+        "serverRequirements": [
+            "Es wird empfohlen, Opencast Matterhorn Version 1.4.x oder 1.5.x zu benutzen",
+            "Opencast Matterhorn Version 1.3.x wird ebenfalls unterstützt",
+            "Versionen höher als 1.4.x wurden noch nicht getestet"
+        ],
+        "changelog": "downloads/Changelog",
+        "eula": "downloads/Licenses/EULA"
+    },
+	"downloads": [
+        {
+			"type": "currentWindows",
+			"name": "Matterhorn Remote Inbox - Stabile version - v1.8.0 build 20.03.2015 1 (Windows-Setup)",
+			"url": "downloads/mhri-1.8.0-setup.zip"
+		},
+        {
+			"type": "currentCross",
+			"name": "Matterhorn Remote Inbox - Stabile version - v1.8.0 build 20.03.2015 1 (Verschiedene Plattformen)",
+			"url": "downloads/mhri-1.8.0-raw.zip"
+		},
+        {
+			"type": "old",
+			"list": [
+				{
+					"name": "v1.6.3 build 06.10.2014 1 (Windows-Setup)",
+					"url": "downloads/mhri-1.6.3-setup.zip"
+				},
+				{
+					"name": "v1.6.3 build 06.10.2014 1 (Verschiedene Plattformen)",
+					"url": "downloads/mhri-1.6.3-raw.zip"
+				},
+				{
+					"name": "v1.6.2 build 25.09.2014 1 (Windows-Setup)",
+					"url": "downloads/mhri-1.6.2-setup.zip"
+				},
+				{
+					"name": "v1.6.1 build 23.09.2014 1 (Windows-Setup)",
+					"url": "downloads/mhri-1.6.1-setup.zip"
+				},
+				{
+					"name": "v1.6.0 build 16.06.2014 1 (Windows-Setup)",
+					"url": "downloads/mhri-1.6.0-setup.zip"
+				},
+				{
+					"name": "v1.5.1 build 18.02.2014 1 (Windows-Setup)",
+					"url": "downloads/mhri-1.5.1-setup.zip"
+				},
+				{
+					"name": "v1.5.0 build 14.11.2013 1 (Windows-Setup)",
+					"url": "downloads/mhri-1.5.0-setup.zip"
+				},
+				{
+					"name": "v1.4.0 build 05.11.2013 1 (zip)",
+					"url": "downloads/mhri-1.4.0.zip"
+				},
+				{
+					"name": "v1.3.1 build 29.07.2013 1 (zip)",
+					"url": "downloads/mhri-1.3.1.zip"
+				}
+			]
+		}
+	],
+	"screenshots": [
+        {
+			"description": "Inbox-Übersicht",
+			"url": "img/screenshots/screenshot.jpg",
+			"url_short": "img/screenshots/screenshot-s.jpg",
+            "width": "50%"
+		},
+        {
+			"description": "Serien-Editor",
+			"url": "img/screenshots/screenshot2.jpg",
+			"url_short": "img/screenshots/screenshot2-s.jpg",
+            "width": "70%"
+		},
+        {
+			"description": "Episoden-Editor",
+			"url": "img/screenshots/screenshot3.jpg",
+			"url_short": "img/screenshots/screenshot3-s.jpg",
+            "width": "70%"
+		},
+        {
+			"description": "Flavor-Editor",
+			"url": "img/screenshots/screenshot4.jpg",
+			"url_short": "img/screenshots/screenshot4-s.jpg",
+            "width": "100%"
+		}
+	],
+	"features": [
+        {
+			"name": "Kompatibilität",
+			"list": [
+	            "Kompatibel mit Matterhorn Versionen 1.3+, die beste Erfahrung gelingt mit Matterhorn Versionen 1.4+",
+	            "Getestet unter Windows 7 und Windows 8",
+	            "Arbeitet in Kombination mit TheRec Matterhorn zusammen"
+			]
+		},
+        {
+			"name": "Integration",
+			"list": [
+	            "Start als Service im Hintergrund",
+	            "Automatischer Start bei Login oder sofortiger Start via Shortcut auf dem Desktop",
+	            "Tray-Icon in der Menübar für sofortigen Zugriff auf alle Funktionalitäten",
+	            "Überwacht ein angegebenes Verzeichnis im Hintergrund",
+	            "Startet nur ein Mal, überprüft auf andere Instanzen vor dem Start",
+	            "Aktualisierungs-Überprüfung",
+	            "Sende Log-Dateien zur besseren und schnelleren Fehleranalyse"
+			]
+		},
+        {
+			"name": "Unkompliziertheit",
+			"list": [
+	            "Einfache Setup-Installation, inklusive Standby- und Hibernate-Einstellungen",
+				"Einfache und intuitive grafische Benutzeroberflächen",
+				"Inbox- und Aufzeichnungs-Übersicht",
+				"Serien-Editor",
+				"Episoden-Editor",
+				"Flavor-Editor",
+				"Weitgehende Einstellungen",
+				"Server- und Netzwerk-Status-Anzeige",
+				"Erfolgreich hochgeladene und verarbeitete Aufzeichnungen können direkt im Engage-Player geöffnet werden",
+				"Aufzeichnungs-Daten (Anzahl der Dateien, Größe auf der Festplatte, ausgewählter Workflow)",
+				"Grafischer Aufzeichnungs-Status",
+				"Upload-Daten (Chunk, der aktuell hochgeladen wird, Anzahl der Chunks, die hochzuladen sind, aktuelle Datei, Datei-Größe)",
+				"Aufzeichnungs-Status auf dem Server",
+	            "Aufzeichnungen können als inaktiv, fertig oder fehlgeschlagen markiert werden",
+	            "Filter für Aufzeichnungen nach Status"
+			]
+		},
+        {
+			"name": "Anpassung",
+			"list": [
+	            "Hochladen in Teilen (mit Matterhorn 1.4+) oder am ganzen Stück",
+	            "Einstellbare Chunk-Größe",
+	            "Einstellbare max. gleichzeitige Uploads"
+			]
+		},
+        {
+			"name": "Internationalisierung/Lokalisierung",
+			"list": [
+	            "Englisch",
+	            "Deutsch"
+			]
+		},
+        {
+			"name": "More",
+			"list": [
+	            "Serien-Auswahl (Informationen heruntergeladen vom Server)",
+	            "Workflow-Auswahl pro Inbox oder pro Aufzeichnung (Informationen heruntergeladen vom Server)",
+	            "Upload mit oder ohne Trimming",
+				"Upload mit Szenendetektion",
+	            "Automatisches erneutes Hochladen von fehlgeschlagenen Aufzeichnungen",
+	            "Weitgehende Bedienungsanleitung vorhanden"
+			]
+		}
+	],
+	"news": [
+        {
+			"name": "20/03/2015: Version 1.8.0 veröffentlicht",
+			"list_bugfixes": [
+				"Java 1.8-Unterstützung",
+				"Bibliotheken-Upgrade",
+				"Abhängigkeiten zum Opencast-Projekt entfernt"
+			],
+			"list_features": [
+			]
+		},
+        {
+			"name": "06/10/2014: Version 1.6.3 veröffentlicht",
+			"list_bugfixes": [
+				"Nicht erkannte Dateien stoppen den Upload",
+				"Inboxes mit keiner Aufzeichnung konnten nicht gelöscht werden",
+				"Der Runnable Conductor hat sich manchmal aufgehängt"
+			],
+			"list_features": [
+                "Ein Klick zum Hochladen oder Stoppen des Hochladevorgangs der ganzen Serie"
+			]
+		},
+        {
+			"name": "25/09/2014: Version 1.6.2 veröffentlicht",
+			"list_bugfixes": [
+			],
+			"list_features": [
+                "Serien-Informationen werden in der Aufzeichnungs-Darstellung angezeigt"
+			]
+		},
+        {
+			"name": "16/06/2014: Version 1.6.0 veröffentlicht",
+			"list_bugfixes": [
+                "Wenn der Port in den Einstellungen geändert wurde, wurde er nicht gespeichert",
+				"Aktualisierungs-UI wurde nicht angezeigt, wenn per Hand nach Aktualisierungen gesucht wurde",
+				"Verschiedene Sicherheits-Aktualisierungen",
+				"Datenbank-Fixes",
+				"Die Aufzeichnungs-Benutzeroberfläche wird nun automatisch aktualisiert, wenn eine Datei angelegt/modifiziert/gelöscht wurde",
+				"Die Aufzeichnungs-Benutzeroberfläche wird nun automatisch aktualisiert, wenn eine andere Inbox gewählt wurde",
+				"Wenn der Status manuell von Completed zu Idle gewechselt wurde, wurde die Statusanzeige nicht automatisch aktualisiert"
+			],
+			"list_features": [
+	            "Benutzeroberflächen aktualisiert",
+				"Zeitformat in der Episoden-Benutzeroberfläche lesbarer gemacht",
+				"Die Zeit im Episoden-Editor wird nun automatisch von UTC zu lokaler Zeit konvertiert",
+				"Einstellungs-Import und -Export zur Einstellungs-Benutzeroberfläche hinzugefügt",
+				"Aufzeichnungen werden alphanumerisch sortiert",
+				"Serien werden alphanumerisch sortiert",
+				"Performance-Verbesserungen",
+				"Stabilitäts-Verbesserungen"
+			]
+		},
+        {
+			"name": "18/02/2014: Version 1.5.1 veröffentlicht",
+			"list_bugfixes": [
+			],
+			"list_features": [
+	            "'Öffne Verzeichnis'-Option zu den Kontextmenüs hinzugefügt"
+			]
+		},
+        {
+			"name": "14/11/2013: Version 1.5.0 veröffentlicht",
+			"list_bugfixes": [
+				"'Flickern' in der Inboxen UI entfernt",
+				"Temporäre Dateien wurden nicht ordnungsgemäß gelöscht",
+	            "Einige kleinere Fehler wurden behoben",
+				"Hochladen stoppt, wenn Server Chunks nicht verarbeiten kann",
+				"Instantiated-Server-Status hinzugefügt"
+			],
+			"list_features": [
+	            "Grafischer Windows-Installer",
+	            "Internationalisierung/Lokalisierung: Englisch, Deutsch",
+				"Episoden-Editor",
+	            "Verbessertes Memory-Management",
+				"Verbesserter Ausgaben"
+			]
+		},
+        {
+			"name": "05/11/2013: Version 1.4.0 veröffentlicht",
+			"list_bugfixes": [
+				"Wenn noch keine Log-Datei vorhanden war und es versucht wurde, die Log-Datei zu versenden, wurde ein Fehler angezeigt",
+				"Verschiedene kleinere Bugfixes",
+				"Korrumpierte Datenbank verursacht Anwengungs-Crash",
+				"Warten auf Aufzeichnungen, die gerade empfangen werden, hat nicht immer funktioniert bei großen Dateien",
+				"Workflow-Definitions-ID wurde nicht sofort aktualisiert, nachdem sie in den Einstellungen geändert wurde"
+			],
+			"list_features": [
+				"Stabilere und Crash-resistentere Kern-Anwendung",
+				"Neustarten der Anwendung nach einer Einstellungsänderung ist nicht mehr notwendig",
+				"Datenbank wird zurückgesetzt, wenn sie korrumpiert ist",
+				"Status der Aufzeichnungen werden überprüft, um Fehler zu vermeiden",
+				"Interne Verbesserungen (z.B. Memory-Management, Ausnahmebehandlung, Tests)",
+				"Workflow-Definitionen-Übersicht (vom Server heruntergeladen)",
+				"Workflow-Auswahl pro Inbox oder pro Aufzeichnung, wenn kein Workflow ausgewählt wurde wird ein einstellbarer Default-Workflow genommen",
+				"Serien-Editor",
+				"Flavor-Editor",
+				"Gesamte UI vereinfacht",
+				"Öffnen einer erfolgreich hochgeladene Aufzeichnung im Browser",
+				"Server-Status-Anzeige nach erfolgreichem Upload",
+				"Szenen-Erkennungs-Option neben Trim-Option hinzugefügt",
+				"'Mark as', Aufzeichnungen als completed, idle oder failed markieren",
+				"Filter für Aufzeichnungen nach dessen Status",
+				"User-Dialog ob ein bekannter Flavor zu einer Aufzeichnung mit unbekanntem Flavor hinzugefügt werden soll",
+				"Serien werden sortiert angezeigt",
+				"Workflows werden sortiert angezeigt",
+				"Aktualisierung der Icons",
+				"Kontext-Menus hinzugefügt",
+				"Einstellung der Anzahl von Versuchen zum wiederholten Hochladen fehlgeschlagener Aufzeichnungen",
+				"Einstellung für einen automatischen Update-Check hinzugefügt",
+				"Zurücksetzen-Option für einige der Einstellungen hinzugefügt",
+				"Erster-Start-Dialog hinzugefügt",
+				"Status-Anzeige, nachdem die Einstellungen geändert wurden",
+				"Anzeige, dass Serien-Informationen geändert wurden und eines Reset-Knopfes",
+				"Anzahl der hochzuladenen Dateien und Groesse dieser werden angezeigt",
+				"Mehr Details über die Upload-Datei (Datei, Größe, Chunk-Nummer) werden angezeigt",
+				"Warnung bei Änderungen der Einstellungen wenn gerade Jobs laufen",
+				"Warnung bei Änderung des Haupt-Verzeichnisses in den Einstellungen",
+				"Warnung bei Upload-Versuch von leeren Aufzeichnungen",
+				"Warnung bei Upload-Versuch von Aufzeichnungen mit nicht-einzigartigen Flavors",
+				"Warnung bei Upload-Versuch von schon erfolgreich hochgeladenen Aufzeichnungen",
+				"Warnung bei Markierungs-Versuch von schon erfolgreich hochgeladenen Aufzeichnungen",
+				"Warnung bei Datenbank-Fehler + -Reset",
+	            "Automatische Planung von fehlgeschlagenen Aufzeichnungen plus eine Einstellungs-Option, um das Feature zu aktivieren und deaktivieren, Standard auf aktiviert gesetzt",
+				"Install- und Uninstall-Skript aktualisiert",
+				"Standby- und Hibernate-Einstellungen zum Install-Skript hinzugefügt",
+				"Mehr Variablen in der Konfigurationsdatei"
+			]
+		},
+        {
+			"name": "29/07/2013: Version 1.3.1 veröffentlicht",
+			"list_bugfixes": [
+	            "Einige seltene Datenbank-Fehler beseitigt",
+	            "Die Dublin Core XML-Datei wurde in manchen Fällen nicht mit hochgeladen",
+	            "Aufzeichnungen hatten in manchen Fällen den Status IDLE anstatt von COMPLETED"
+			],
+			"list_features": [
+			]
+		},
+        {
+			"name": "18/07/2013: Version 1.3.0 veröffentlicht",
+			"list_bugfixes": [
+	            "Geplante Uploads konnten erst im Upload-Status abgebrochen werden",
+	            "Viele Bugs bezüglich Stabilität und allgemeiner Verbesserung",
+	            "Erkennung, wann eine Datei noch am Schreiben ist und wenn das Kopieren beendet wurde"
+			],
+			"list_features": [
+	            "MHRI Update-Überprüfer, sucht bei Programmstart und alle paar Stunden nach Updates",
+	            "Check-for-Update-Tray-Icon",
+	            "Aktualisierte und größere Grafiken",
+	            "Recording-Anzeige unterscheidet zwischen Normal und Trim im Status Scheduled",
+	            "MHRI-Schlüssel für jede Installation",
+	            "Schlüssel-Import und -Export (im About-UI)",
+	            "Log-Ausgaben in eine Log-Datei und in die Konsole",
+	            "Log-Dateien können nun zum MHRI log server hochgeladen werden"
+			]
+		},
+        {
+			"name": "04/07/2013: Version 1.2.1 veröffentlicht",
+			"list_bugfixes": [
+	            "Keine doppelten Inboxen",
+	            "Keine doppelten Aufzeichnungen",
+	            "Keine doppelten Aufzeichnungs-Dateien"
+			],
+			"list_features": [
+			]
+		},
+        {
+			"name": "01/07/2013: Version 1.2.0 veröffentlicht",
+			"list_bugfixes": [
+	            "Alle Verbindungen werden ordentlich geschlossen",
+	            "Nebenläufige (geplante) Uploads sind nun möglich; neu: Ein Controller, der die einzelnen Ingests kontrolliert",
+	            "Löschen von Inboxen",
+	            "Löschen von Aufzeichnungen",
+	            "Sicherstellung, dass eine Default Inbox beim Start vorhanden ist",
+	            "Reparierter MH 1.3-Upload"
+			],
+			"list_features": [
+	            "Mit vielen Optionen erweiterte Einstellungen",
+	            "Aktualisierte und nun konsistente UIs",
+	            "Check zur Anzeige von Aufzeichnungs-Aktions-Buttons, um die auszublenden, welche momentan nicht erlaubt sind",
+	            "'Sofortiger-Upload'-Buttons entfernt (es sollen nur noch die 'Plane-Upload'-Buttons benutzt werden)",
+	            "Verbesserte Ausnahmebehandlung im Application-Service"
+			]
+		},
+        {
+			"name": "28/06/2013: Version 1.1.4 veröffentlicht",
+			"list_bugfixes": [
+	            "Es werden keine unsichtbaren Datein mehr getrackt",
+	            "MHRI ist nicht vernünftig gestart, nachdem es per Autostart gestartet, dann beendet und dann per Hand gestartet wurde: Es konnten keine Daten geladen werden"
+			],
+			"list_features": [
+	            "Netzwerkstatusanzeige integriert",
+	            "Verbesserte Ausnahmebehandlung im Ingest-Service"
+			]
+		},
+        {
+			"name": "11/06/2013: Version 1.1.3 veröffentlicht",
+			"list_bugfixes": [
+	            "Der Upload stoppt komplett, wenn 'Stop' gedrückt wurde"
+			],
+			"list_features": [
+	            "Installationsprozess vereinfacht: Alte Versionen werden vor der Installation automatisch gelöscht",
+	            "Zu den Bedienungsanleitungen hinzugefügt, wie man Java konfiguriert"
+			]
+		},
+        {
+			"name": "20/05/2013: Version 1.1.2 veröffentlicht",
+			"list_bugfixes": [
+	            "Anzeigestatus korrekt mit einer größeren Anzahl an Chunks",
+	            "Die Chunk-Größe kann in den grafischen Einstellungen gespeichert werden"
+			],
+			"list_features": [
+	            "Check, ob aktuell eine andere Instanz läuft",
+	            "Anzeigestatus zeigt eine Prozentanzeige an",
+	            "Die Upload-Methode (In Chunks (1.4) oder in eins (1.3)) ist auswählbar; kann in den grafischen Einstellungen gespeichert werden",
+	            "Der Chunk, welcher gerade hochgeladen wird und die Anzahl an Chunks werden neben dem Namen der Datei, welche gerade hochgeladen wird, angezeigt, wenn der Upload in Chunks ausgewählt ist"
+			]
+		},
+        {
+			"name": "18/02/2013: Version 1.1.1 veröffentlicht",
+			"list_bugfixes": [
+	            "Nach dem Download einer Series (oder der Neuerstellung einer Episoden-Datei) wurde die neu angelegte Datei in einen separaten Ordner (genau wie andere Dateien) verschoben",
+	            "Nachfrage, wenn Exit beim Serie-Auswahl-Dialog geklickt wird, ob der Nutzer die alte Serie ersetzen möchte",
+				"Bedienungsanleitungen aktualisiert, Changelog hinzugefügt"
+			],
+			"list_features": [
+	            "Windows 8-kompatibel",
+	            "Trim hold-State nun verfügbar",
+	            "Inbox-Informationen (+ Series-Informationen) nun verfügbar",
+	            "Download bis zu 100 Serienlisten-IDs nun verfügbar (vorher nur standardmäßig 25)",
+	            "Geändertes About-Fenster-Design, Link zu Icon-Set hinzugefügt",
+	            "Wenn Enter in einem der Felder in den Einstellungen gedrückt wird, werden die Änderungen gespeichert"
+			]
+		},
+        {
+			"name": "25/09/2012: Version 1.1.0 veröffentlicht",
+			"list_bugfixes": [
+	            "Verbesserte Stabilität und verbesserte Ausnahmebehandlung",
+	            "'Create inbox' verhält sich nun normal ohne erforderlichen Neustart, wenn das Hauptverzeichnis geändert wurde",
+	            "Die Iconliste ist nun nicht mehr verschiebbar",
+	            "Der Tray-Icon-Doppelklick, um die Inboxen anzuzeigen, wurde gegen einen Einfach-Klick ersetzt",
+	            "Verbesserte Installations- und Deinstallations-Skripte mit klaren Benachrichtigungen für den Nutzer",
+	            "Verbessertes README und verbesserte Benutzerhandbücher"
+			],
+			"list_features": [
+	            "Unterstützung für den Upload zu Matterhorn Version 1.3 zuzüglich zu Matterhorn Version 1.4+",
+	            "Neue Option, um auszuwählen, ob MHRI als Service oder als Programm gestartet werden soll",
+	            "Neue Funktion: 'Delete Inbox'",
+	            "Neue Funktion: 'Delete Recording'",
+	            "Desktop-Link hinzugefügt, um MHRI vom Desktop aus zu starten",
+	            "Verschiebung einer Datei, welche nicht in einem Ordner in einer Inbox ist in einen neu erstellten Ordner in der Inbox"
+			]
+		},
+        {
+			"name": "12/09/2012: Version 1.0.1 veröffentlicht",
+			"list_bugfixes": [
+	            "Verbesserte Netzwerkausnahmebehandlung",
+	            "Installations- und Deinstallations-Skripte aktualisiert und eine Informationsnachricht hinzugefügt",
+	            "Eingeschränkte Button-Verfügbarkeit (z.B. kann man nicht mehr 'Delete Inbox' anklicken, wenn gerade eine Aufzeichnung ausgewählt ist)",
+	            "Ränder im UI geändert",
+	            "'Date-Bug' behoben",
+	            "Verbessertes README und verbesserte Benutzerhandbücher",
+	            "Ein Fallback für einen Matterhorn Version 1.4-REST-Endpoint hinzugefügt"
+			],
+			"list_features": [
+	            "Die verschiedenen Status im UI wurden eingefärbt"
+			]
+		},
+        {
+			"name": "09/08/2012: Version 1.0.0 veröffentlicht",
+			"list_bugfixes": [
+			],
+			"list_features": [
+			]
+		}
+	],
+	"information1": "Die Matterhorn Remote Inbox (MHRI) ist ein Hilfsmittel, welches die Zusammenarbeit von externer Hard- und Software und dem <a href='http://opencast.org/matterhorn' target='_blank'>Opencast Matterhorn-Projekt</a> deutlich vereinfacht.<br /><br />MHRI stellt eine einfach zu bedienende grafische Nutzer-Oberfläche zur Verwaltung und zum Hochladen von Aufzeichnungen zur Verfügung. Beim ersten Start wird ein beliebiges Verzeichnis registriert, welches anschließend inklusive aller enthaltenen und zukünftigen Verzeichnisse und Dateien von MHRI überwacht wird. Die Unterverzeichnisse bekommen den Status einer \"Inbox\" zugewiesen und stehen jeweils für eine Serie in Matterhorn. Alle Änderungen an einer der Inboxen werden registriert. Wurde beispielsweise eine neue Aufzeichnung angelegt, d.h. ein neues Verzeichnis in einer der Inboxen erstellt, wird die neue Aufzeichnung, sobald keine weiteren Änderungen mehr registriert werden, zum Hochladen und Verarbeiten markiert. In der grafischen Nutzer-Oberfläche wird unter anderem der Status der Aufzeichnungen auf dem Rechner und auf dem Server angezeigt. Auch sind neben Funktionen zur Planung, zum Stoppen und zum Wiederholen eines Prozesses weitere Funktionen wie das Anlegen und Bearbeiten einer neuen Serie auf dem Server oder das Zuweisen eines Workflows und verschiedene Editoren vorhanden.",
+    "information2": "Die Matterhorn Remote Inbox eignet sich zur Zusammenarbeit mit <a href='http://zentrum.virtuos.uos.de/therec' target='_blank'>TheRec Matterhorn</a>. TheRec Matterhorn kann Videos von mehreren Quellen gleichzeitig synchron aufnehmen. Stellt man in den Einstellungen von TheRec Matterhorn ein, dass direkt in das überwachte Verzeichnis aufgenommen werden soll, werden alle Änderungen von MHRI registriert und direkt im Anschluss zu Matterhorn hochgeladen.<br /><br />MHRI wurde vom aktuell aktiven Entwickler <a href='mailto:calltopower88@gmail.com'>Denis Meyer</a> und dem ehemaligen Entwickler Benjamin Wulff entwickelt. Die Organisationen dahinter: <a href='http://www.elan-ev.de' target='_blank'>ELAN e.V.</a>, <a href='http://www.virtuos.uni-osnabrueck.de' target='_blank'>virtUOS</a>, <a href='http://www.uni-osnabrueck.de' target='_blank'>Universität Osnabrück</a>."
+}

@@ -1,0 +1,283 @@
+==================================
+| Matterhorn Remote Inbox - MHRI |
+==================================
+
+-------------
+| Changelog |
+-------------
+
+
+Version 1.8.0
+-------------
+20/03/2015
+New features:
+- Java 1.8 support
+- Library upgrade
+- Removed dependencies from Opencast project
+
+
+Version 1.6.3
+-------------
+02/10/2014
+Bugfixes:
+- Not recognized files stop the upload
+- Inboxes without a recording couldn't be deleted
+- The runnable conductor sometimes crashed
+New features:
+- One click to upload or stop the upload the whole series
+
+
+Version 1.6.2
+-------------
+25/09/2014
+New features:
+- series information are being displayed in the recording overview
+
+
+Version 1.6.1
+-------------
+24/06/2014
+New features:
+- The currently assigned series gets checked before uploading to the server. When the name is equal to a series on the server but the ID is another one, different solutions are being presented
+- Changed some strings according to Matterhorn
+
+
+Version 1.6.0
+-------------
+16/06/2014
+Bugfixes:
+- Changed port not safed when changed via preferences
+- Update UI not shown when looking for updates manually
+- Misc security updates
+- Database fixes
+- Updating the recording UI automatically when a file has been created/modified/deleted
+- Updating the recording UI automatically when another inbox has been selected
+- When switching states manually from completed to idle the state has not been updated until the user clicked on the recording
+New features:
+- Updated the UIs
+- Made the time format in the episode UI more readable
+- Converting the time in the episode editor from UTC to local time automatically
+- Added a preferences import and export via the preferences UI
+- Recordings are being sorted alphanumerically
+- Series are being sorted alphanumerically
+- Performance improvements
+- Stability improvements
+
+
+Version 1.5.1
+-------------
+19/02/2014
+New features:
+- Added "Open folder" option to the context menus
+
+
+Version 1.5.0
+-------------
+14/11/2013
+Bugfixes:
+- Removed "flickering" from inbox UI
+- Temporary files not being deleted properly
+- Fixed some smaller bugs
+- Stop uploading more chunks when server failed processing it
+- Added Instantiated server status
+New features:
+- Graphical windows installer
+- Internationalization/Localization: English, german
+- Episode editor
+- Improved memory management
+- Improved output
+
+
+Version 1.4.0
+-------------
+05/11/2013
+Bugfixes:
+- When no log file has been created yet an error occurs when trying to send it
+- Different minor bug fixes
+- Corrupted database results in application crash
+- Waiting for recieving recordings does not work properly with bigger files
+- Workflow definition ID did not update immediately after changing it in the preferences
+New features:
+- More stable and crash-resistant core application
+	- restarting the application after a preference update is not necessary any more
+	- resetting the database when database is currupted
+	- checking states of the recordings to prevent failure
+	- internal improvements (e.g. memory management, exception handling, tests)
+- Workflow
+	- definitions overview (fetched from the server)
+	- select per inbox or per recording, global default workflow when not selected
+- Series editor
+- Flavor editor
+- UI updates
+	- simplified the whole UI
+	- open a successfully uploaded recording in the browser
+	- displaying server status after uploaded a recording successfully
+	- added scene detection option next to the trim option
+	- "Mark as", mark recordings as completed, idle or failed
+	- filter recordings after their status
+	- user dialog whether to add a known flavor to recordings with an unknonwn flavor
+	- display series sorted
+	- display workflows sorted
+	- updated the icons
+	- added context menus
+	- preferences options for number of tries of re-ingesting failed uploads
+	- preferences options for an automatic check for updates
+	- added reset option for some preferences options
+	- added a first-start-dialogue
+	- displaying a status when saving preferences
+	- displaying that series information has been changed and a reset button
+	- added the number of files to be uploaded and the size of the files
+	- added more details about the current upload (file, size, current chunk)
+	- warning
+		- when changing the preferences and there are jobs running
+		- when changing the main directory in the preferences
+		- when trying to upload an empty recording
+		- when trying to upload recordings without unique flavors
+		- when trying to re-ingest an already successfully uploaded recording
+		- when trying to mark an already successfully uploaded recording
+		- when a database error+reset occured
+- Automatted scheduling of failed recordings plus a preferences option to enable and disable it, default to enabled
+- Updated the install and uninstall script
+- Added standby and hibernate settings to the install script
+- More variables in the config
+
+
+Version 1.3.1
+-------------
+29/7/2013
+Bugfixes:
+- Fixed some rare Database errors
+- Did not upload the dublin core XML file in some cases
+- Recordings had the state IDLE instead of COMPLETED in some cases
+
+
+Version 1.3.0
+-------------
+18/7/2013
+Bugfixes:
+- Could not stop scheduled file while in that state
+- Many bugs regarding stability and overall improvement
+- Correctly recognizing when a file is being recieved and when copying has been finished
+New features:
+- MHRI update checker, checks at startup and every few hours for updates
+- Check-for-update-tray icon
+- Updated and bigger graphics
+- Recording GUI differentiates between normal and trim in state Scheduled
+- MHRI key for every installation
+- Key importer and exporter (in the About UI)
+- Logging to a file and to console
+- Log files can be uploaded to the MHRI log server
+
+
+Version 1.2.1
+-------------
+4/7/2013
+Bugfixes:
+- No duplicate inboxes
+- No duplicate recordings
+- No duplicate recording files
+
+
+Version 1.2.0
+-------------
+1/7/2013
+Bugfixes:
+- Closing all connections properly
+- Concurrent (scheduled) uploads now possible, introducing controller that controls the independent ingests
+- Deleting of inboxes
+- Deleting of recordings
+- Ensure default inbox at start
+- Fixed MH 1.3 upload
+New features:
+- Extended the preferences with many options
+- Updated the UIs to be consistent
+- Check for the display of recording action buttons that are allowed and for those which are not allowed
+- Removed the "upload now"-buttons (use the "schedule upload"-buttons instead)
+- Improved exception handling in the application service
+
+
+Version 1.1.4
+-------------
+28/6/2013
+Bugfixes:
+- Not tracking hidden files
+- MHRI did not start when started automatically at login, then quit, then restarted manually: No rights to load data
+New features:
+- Network status display integrated
+- Improved exception handling in the ingest service
+
+
+Version 1.1.3
+-------------
+11/6/2013
+Bugfixes:
+- Upload fully stops when clicking on "Stop"
+New features:
+- Simplified the installation: Removing old versions before installation automatically
+- Added how to set up Java to the manuals
+
+
+Version 1.1.2
+-------------
+20/5/2013
+Bugfixes:
+- Progress bar works with a higher amount of chunks
+- The chunk size can be saved via the preferences GUI
+New features:
+- Check whether another instance is currently running
+- Progress bar displays a percentage
+- Upload method (chunked (1.4) or not chunked (1.3)) choosable; can be saved via the preferences GUI
+- The current chunk to be uploaded and the total number of chunks are being displayed next to the file name when chunked upload is selected
+
+
+Version 1.1.1
+-------------
+18/2/2013
+Bugfixes:
+- When downloaded a series (or created an episode file), the newly created file has been put into a separate folder (like other files)
+- When clicking on exit at the select-series-dialog the user has been asked whether to replace the old series file
+- Updated the manuals, added a changelog
+New features:
+- Windows 8 compatible
+- Trim hold state now available
+- Inbox information (+ Series information) now available
+- Downloading up to 100 series list IDs not supported (up from the default of 25)
+- Changed the about window design, added a link to the icon set
+- Pressing Enter in one of the fields in the preferences saves the changes
+
+
+Version 1.1.0
+-------------
+25/9/2012
+Bugfixes:
+- Improved stability and exception handling
+- Create inbox now working without a restart when main directory has been changed
+- Icon list now non-floatable
+- Tray icon double click to display inboxes replaced with single click
+- Improved install and uninstall scripts with clearer messages for the user
+- Improved README and manuals
+New features:
+- Support for uploading to Matterhorn Version 1.3 in addition to Matterhorn Version 1.4+
+- New option to select whether to start MHRI as a service or as an application
+- New function: "Delete Inbox"
+- New function: "Delete Recording"
+- Added a desktop shortcut to start MHRI from within the desktop
+- Moving a file not contained in a folder inside an inbox in a newly created folder inside the inbox
+
+Version 1.0.1
+-------------
+12/9/2012
+Bugfixes:
+- Improved network exception handling
+- Updated and added an information message to the install and uninstall scripts
+- Restricted button availability (e.g. you can't select "Delete Inbox" when a recording is currently selected)
+- Changed borders of the UI
+- Fixed "date bug"
+- Improved README and manuals
+- Added a fallback for a Matterhorn Version 1.4 REST endpoint
+New features:
+- Colored in the different status in the UI
+
+Version 1.0.0
+-------------
+9/8/2012

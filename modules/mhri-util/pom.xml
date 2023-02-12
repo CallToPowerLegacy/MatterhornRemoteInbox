@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <artifactId>mhri-util</artifactId>
+    <name>MHRI Utilities</name>
+    <groupId>de.calltopower.mhri</groupId>
+    <packaging>bundle</packaging>
+    <version>1.8.0</version>
+  
+    <parent>
+        <groupId>de.calltopower.mhri</groupId>
+        <artifactId>base</artifactId>
+        <version>1.8.0</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+  
+    <dependencies>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+        
+            <!-- Generate OSGi Bundle -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName> ${project.artifactId} </Bundle-SymbolicName>
+                        <Bundle-Activator>de.calltopower.mhri.util.Activator</Bundle-Activator>
+                        <Export-Package>
+                            de.calltopower.mhri.util;version=${project.version},
+                            de.calltopower.mhri.util.conf;version=${project.version}
+                        </Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

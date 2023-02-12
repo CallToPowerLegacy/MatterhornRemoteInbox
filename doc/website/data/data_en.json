@@ -1,0 +1,487 @@
+{
+    "translations": {
+        "information": "Information",
+        "news": "News",
+        "features": "Features",
+        "download": "Download",
+        "faq_short": "FAQ",
+        "faq": "Frequently Asked Questions (FAQ)",
+        "register": "Register",
+        "contact": "Contact",
+        "loading": "Loading",
+        "systemRequirements": "System requirements",
+        "serverRequirements": "Server requirements",
+        "changelog": "Changelog",
+        "oldVersions": "Old versions",
+        "eula": "EULA",
+        "name": "Name",
+        "organization": "Organization",
+        "subject": "Subject",
+        "mhriKey": "MHRI key",
+        "send": "Send",
+        "str_eula": "With downloading one of the versions of the software you accept the EULA"
+    },
+	"newsalert": "20/03/2015: Version 1.8.0 released. <a href='#download'>Download now</a>.",
+	"faq": [
+        {
+			"question": "Where can I find my MHRI key?",
+			"answer": "<ol><li>Right click on the MHRI tray icon</li><li>Click on About</li><li>Copy the displayed key</li></ol>"
+		},
+        {
+			"question": "How do I upgrade from another version?",
+			"answer": "Update a version prior to 1.5.x: <ol><li>This is not possible due to database changes.</li></ol>Update from 1.5.x: <ol><li>In the MHRI config folder (C:\\…\\mhri-1.y.x\\conf) save the file 'mhri.properties'</li><li>[optional] Save the MHRI database folder (C:\\…\\mhri-1.y.x\\database)</li><li>Uninstall MHRI (via system preferences - 'Uninstall applications')</li><li><a href='#download'>Download</a> a current version of MHRI</li><li>Unzip and follow the setup</li><li>[optional] Before starting the first time, copy and paste the previously saved MHRI database folder to C:\\…\\MHRI\\1.6.x\\App</li><li>Import your previously saved settings from the MHRI settings UI</li></ol>Update from 1.6.x: <ol><li>Export your settings via the MHRI settings UI</li><li>[optional] Save the MHRI database folder (C:\\…\\mhri-1.y.x\\database)</li><li>Uninstall MHRI (via system preferences - 'Uninstall applications')</li><li><a href='#download'>Download</a> a current version of MHRI</li><li>Unzip and follow the setup</li><li>[optional] Before starting the first time, copy and paste the previously saved MHRI database folder to C:\\…\\MHRI\\1.6.x\\App</li><li>Import your previously saved settings from the MHRI settings UI</li></ol>"
+		},
+        {
+			"question": "MHRI does not start after an upgrade, what can I do?",
+			"answer": "Check the following things: <ol><li>Do I have the correct Java version? Java 8 is required.</li><li>Is another version of MHRI running in the background? Then end it.</li><li>Delete the cache folder</li></ol> If this did not work for you: <ul><li>Directly after the installation (don't restart the computer) not only copy and paste the folder 'database', but the file previously saved file 'mhri.config' as well (means: don't import the config via the settings UI)</li></ul>"
+		}
+	],
+    "downloadMetadata" : {
+        "systemRequirements": [
+            "Oracle Java 8 JRE",
+            "Windows 7, Windows 8 (Windows setup)",
+            "Any platform that runs Java 8 (Cross platform)"
+        ],
+        "serverRequirements": [
+            "It is recommended to use Opencast Matterhorn version 1.4.x or 1.5.x",
+            "Opencast Matterhorn version 1.3.x is supported as well",
+            "Versions greater than 1.5.x have not been tested, yet"
+        ],
+        "changelog": "downloads/Changelog",
+        "eula": "downloads/Licenses/EULA"
+    },
+	"downloads": [
+        {
+			"type": "currentWindows",
+			"name": "Matterhorn Remote Inbox - Stable version - v1.8.0 build 20.03.2015 1 (Windows setup)",
+			"url": "downloads/mhri-1.8.0-setup.zip"
+		},
+        {
+			"type": "currentCross",
+			"name": "Matterhorn Remote Inbox - Stable version - v1.8.0 build 20.03.2015 1 (Cross platform)",
+			"url": "downloads/mhri-1.8.0-raw.zip"
+		},
+        {
+			"type": "old",
+			"list": [
+				{
+					"name": "v1.6.3 build 06.10.2014 1 (Windows setup)",
+					"url": "downloads/mhri-1.6.3-setup.zip"
+				},
+				{
+					"name": "v1.6.3 build 06.10.2014 1 (Cross platform)",
+					"url": "downloads/mhri-1.6.3-raw.zip"
+				},
+				{
+					"name": "v1.6.2 build 25.09.2014 1 (Windows setup)",
+					"url": "downloads/mhri-1.6.2-setup.zip"
+				},
+				{
+					"name": "v1.6.1 build 23.09.2014 1 (Windows setup)",
+					"url": "downloads/mhri-1.6.1-setup.zip"
+				},
+				{
+					"name": "v1.6.0 build 16.06.2014 1 (Windows setup)",
+					"url": "downloads/mhri-1.6.0-setup.zip"
+				},
+				{
+					"name": "v1.5.1 build 18.02.2014 1 (Windows setup)",
+					"url": "downloads/mhri-1.5.1-setup.zip"
+				},
+				{
+					"name": "v1.5.0 build 14.11.2013 1 (Windows setup)",
+					"url": "downloads/mhri-1.5.0-setup.zip"
+				},
+				{
+					"name": "v1.4.0 build 05.11.2013 1 (zip)",
+					"url": "downloads/mhri-1.4.0.zip"
+				},
+				{
+					"name": "v1.3.1 build 29.07.2013 1 (zip)",
+					"url": "downloads/mhri-1.3.1.zip"
+				}
+			]
+		}
+	],
+	"screenshots": [
+        {
+			"description": "Inbox overview",
+			"url": "img/screenshots/screenshot.jpg",
+			"url_short": "img/screenshots/screenshot-s.jpg",
+            "width": "50%"
+		},
+        {
+			"description": "Series editor",
+			"url": "img/screenshots/screenshot2.jpg",
+			"url_short": "img/screenshots/screenshot2-s.jpg",
+            "width": "70%"
+		},
+        {
+			"description": "Episode editor",
+			"url": "img/screenshots/screenshot3.jpg",
+			"url_short": "img/screenshots/screenshot3-s.jpg",
+            "width": "70%"
+		},
+        {
+			"description": "Flavor editor",
+			"url": "img/screenshots/screenshot4.jpg",
+			"url_short": "img/screenshots/screenshot4-s.jpg",
+            "width": "100%"
+		}
+	],
+	"features": [
+        {
+			"name": "Compatability",
+			"list": [
+				"Compatible with Matterhorn versions 1.3+, best experience with Matterhorn versions 1.4+",
+				"Tested under Windows 7 and Windows 8",
+				"Works in combination with TheRec Matterhorn"
+			]
+		},
+        {
+			"name": "Integration",
+			"list": [
+				"Start as a service in the background",
+	            "Automatic start at login or instant start via desktop shortcut",
+	            "Tray icon in the menu bar for instant access to all functionality",
+	            "Monitors a specified directory in the background",
+	            "Just starts once, checks for other instances before starting",
+	            "Check for updates",
+	            "Send log files for better and faster error analysis"
+			]
+		},
+        {
+			"name": "Simplicity",
+			"list": [
+				"Easy setup installation, including standby and hibernate settings",
+				"Simple and intuitive graphical user interface",
+				"Inbox and recordings overview",
+				"Series editor",
+				"Episode editor",
+				"Flavor editor",
+				"Extensive settings",
+				"Server and network status display",
+				"Open successfully uploaded and processed recordings directly in the engage player",
+				"Recording data (number of files, size on disk, selected workflow)",
+				"Graphical recording status",
+				"Upload data (current chunk to be uploaded, total number of chunks, current file, file size)",
+				"Recording status on server",
+	            "Mark recordings as idle, completed or failed",
+	            "Filter recordings after status"
+			]
+		},
+        {
+			"name": "Adjustment",
+			"list": [
+				"Chunked (with Matterhorn 1.4+) or non-chunked upload",
+	            "Adjustable chunk size",
+	            "Adjustable max. concurrent uploads"
+			]
+		},
+        {
+			"name": "Internationalization/Localization",
+			"list": [
+				"English",
+	            "German"
+			]
+		},
+        {
+			"name": "More",
+			"list": [
+				"Series selection (information downloaded from the server)",
+	            "Workflow selection per inbox or per recording (information downloaded from the server)",
+	            "Upload with or without trimming",
+	            "Upload with or without scene detection",
+	            "Automatically retry ingesting failed recordings",
+	            "Extensive manual included"
+			]
+		}
+	],
+	"news": [
+        {
+			"name": "20/03/2015: Version 1.8.0 released",
+			"list_bugfixes": [
+				"Java 1.8 support",
+				"Library upgrade",
+				"Removed dependencies from Opencast project"
+			],
+			"list_features": [
+			]
+		},
+        {
+			"name": "06/10/2014: Version 1.6.3 released",
+			"list_bugfixes": [
+				"Not recognized files stop the upload",
+				"Inboxes without a recording couldn't be deleted",
+				"The runnable conductor sometimes crashed"
+			],
+			"list_features": [
+				"One click to upload or stop the upload the whole series"
+			]
+		},
+        {
+			"name": "25/09/2014: Version 1.6.2 released",
+			"list_bugfixes": [
+			],
+			"list_features": [
+				"series information are being displayed in the recording overview"
+			]
+		},
+        {
+			"name": "24/06/2014: Version 1.6.1 released",
+			"list_bugfixes": [
+			],
+			"list_features": [
+				"The currently assigned series gets checked before uploading to the server. When the name is equal to a series on the server but the ID is another one, different solutions are being presented",
+				"Changed some strings according to Matterhorn"
+			]
+		},
+        {
+			"name": "16/06/2014: Version 1.6.0 released",
+			"list_bugfixes": [
+				"Changed port not safed when changed via preferences",
+				"Update UI not shown when looking for updates manually",
+				"Misc security updates",
+				"Database fixes",
+				"Updating the recording UI automatically when a file has been created/modified/deleted",
+				"Updating the recording UI automatically when another inbox has been selected",
+				"When switching states manually from completed to idle the state has not been updated until the user clicked on the recording"
+			],
+			"list_features": [
+				"Updated the UIs",
+				"Made the time format in the episode UI more readable",
+				"Converting the time in the episode editor from UTC to local time automatically",
+				"Added a preferences import and export via the preferences UI",
+				"Recordings are being sorted alphanumerically",
+				"Series are being sorted alphanumerically",
+				"Performance improvements",
+				"Stability improvements"
+			]
+		},
+        {
+			"name": "18/02/2014: Version 1.5.1 released",
+			"list_bugfixes": [
+			],
+			"list_features": [
+				"Added 'Open folder' option to the context menus"
+			]
+		},
+        {
+			"name": "14/11/2013: Version 1.5.0 released",
+			"list_bugfixes": [
+				"Removed 'flickering' from inbox UI",
+				"Temporary files not being deleted properly",
+				"Fixed some smaller bugs",
+				"Stop uploading more chunks when server failed processing it",
+				"Added Instantiated server status"
+			],
+			"list_features": [
+				"Graphical windows installer",
+	            "Internationalization/Localization: English, german",
+				"Episode editor",
+	            "Improved memory management",
+				"Improved output"
+			]
+		},
+        {
+			"name": "05/11/2013: Version 1.4.0 released",
+			"list_bugfixes": [
+				"When no log file has been created yet an error occurs when trying to send it",
+				"Different minor bug fixes",
+				"Corrupted database results in application crash",
+				"Waiting for recieving recordings does not work properly with bigger files",
+				"Workflow definition ID did not update immediately after changing it in the preferences"
+			],
+			"list_features": [
+				"More stable and crash-resistant core application",
+				"restarting the application after a preference update is not necessary any more",
+				"resetting the database when database is currupted",
+				"checking states of the recordings to prevent failure",
+				"internal improvements (e.g. memory management, exception handling, tests)",
+				"Workflow definitions overview (fetched from the server)",
+				"Workflow select per inbox or per recording, global default workflow when not selected",
+				"Series editor",
+				"Flavor editor",
+				"simplified the whole UI",
+				"open a successfully uploaded recording in the browser",
+				"displaying server status after uploaded a recording successfully",
+				"added scene detection option next to the trim option",
+				"'Mark as', mark recordings as completed, idle or failed",
+				"filter recordings after their status",
+				"user dialog whether to add a known flavor to recordings with an unknonwn flavor",
+				"display series sorted",
+				"display workflows sorted",
+				"updated the icons",
+				"added context menus",
+				"preferences options for number of tries of re-ingesting failed uploads",
+				"preferences options for an automatic check for updates",
+				"added reset option for some preferences options",
+				"added a first-start-dialogue",
+				"displaying a status when saving preferences",
+				"displaying that series information has been changed and a reset button",
+				"added the number of files to be uploaded and the size of the files",
+				"added more details about the current upload (file, size, current chunk) to a new detail label",
+				"warning when changing the preferences and there are jobs running",
+				"warning when changing the main directory in the preferences",
+				"warning when trying to upload an empty recording",
+				"warning when trying to upload recordings without unique flavors",
+				"warning when trying to re-ingest an already successfully uploaded recording",
+				"warning when trying to mark an already successfully uploaded recording",
+				"warning when a database error+reset occured",
+				"Automatted scheduling of failed recordings plus a preferences option to enable and disable it, default to enabled",
+				"Updated the install and uninstall script",
+				"Added standby and hibernate settings to the install script",
+				"More variables in the config"
+			]
+		},
+        {
+			"name": "29/07/2013: Version 1.3.1 released",
+			"list_bugfixes": [
+				"Fixed some rare Database errors",
+	            "Did not upload the dublin core XML file in some cases",
+	            "Recordings had the state IDLE instead of COMPLETED in some cases"
+			],
+			"list_features": [
+			]
+		},
+        {
+			"name": "18/07/2013: Version 1.3.0 released",
+			"list_bugfixes": [
+				"Could not stop scheduled file while in that state",
+	            "Many bugs regarding stability and overall improvement",
+	            "Correctly recognizing when a file is being recieved and when copying has been finished"
+			],
+			"list_features": [
+				"MHRI update checker, checks at startup and every few hours for updates",
+	            "Check-for-update-tray icon",
+	            "Updated and bigger graphics",
+	            "Recording GUI differentiates between normal and trim in state Scheduled",
+	            "MHRI key for every installation",
+	            "Key importer and exporter (in the About UI)",
+	            "Logging to a file and to console",
+	            "Log files can be uploaded to the MHRI log server"
+			]
+		},
+        {
+			"name": "04/07/2013: Version 1.2.1 released",
+			"list_bugfixes": [
+				"No duplicate inboxes",
+	            "No duplicate recordings",
+	            "No duplicate recording files"
+			],
+			"list_features": [
+			]
+		},
+        {
+			"name": "01/07/2013: Version 1.2.0 released",
+			"list_bugfixes": [
+				"Closing all connections properly",
+	            "Concurrent (scheduled) uploads now possible, introducing controller that controls the independent ingests",
+	            "Deleting of inboxes",
+	            "Deleting of recordings",
+	            "Ensure default inbox at start",
+	            "Fixed MH 1.3 upload"
+			],
+			"list_features": [
+				"Extended the preferences with many options",
+	            "Updated the UIs to be consistent",
+	            "Check for the display of recording action buttons that are allowed and for those which are not allowed",
+	            "Removed the 'upload now'-buttons (use the 'schedule upload'-buttons instead)",
+	            "Improved exception handling in the application service"
+			]
+		},
+        {
+			"name": "28/06/2013: Version 1.1.4 released",
+			"list_bugfixes": [
+				"Not tracking hidden files",
+	            "MHRI did not start when started automatically at login, then quit, then restarted manually: No rights to load data"
+			],
+			"list_features": [
+				"Network status display integrated",
+	            "Improved exception handling in the ingest service"
+			]
+		},
+        {
+			"name": "11/06/2013: Version 1.1.3 released",
+			"list_bugfixes": [
+				"Upload fully stops when clicking on 'Stop'"
+			],
+			"list_features": [
+				"Simplified the installation: Removing old versions before installation automatically",
+	            "Added how to set up Java to the manuals"
+			]
+		},
+        {
+			"name": "20/05/2013: Version 1.1.2 released",
+			"list_bugfixes": [
+				"Progress bar works with a higher amount of chunks",
+	             "The chunk size can be saved via the preferences GUI"
+			],
+			"list_features": [
+				"Check whether another instance is currently running",
+	            "Progress bar displays a percentage",
+	            "Upload method (chunked (1.4) or not chunked (1.3)) choosable; can be saved via the preferences GUI",
+	            "The current chunk to be uploaded and the total number of chunks are being displayed next to the file name when chunked upload is selected"
+			]
+		},
+        {
+			"name": "18/02/2013: Version 1.1.1 released",
+			"list_bugfixes": [
+				"When downloaded a series (or created an episode file), the newly created file has been put into a separate folder (like other files)",
+	            "When clicking on exit at the select-series-dialog the user has been asked whether to replace the old series file",
+	            "Updated the manuals, added a changelog"
+			],
+			"list_features": [
+				"Windows 8 compatible",
+	            "Trim hold state now available",
+	            "Inbox information (+ Series information) now available",
+	            "Downloading up to 100 series list IDs not supported (up from the default of 25)",
+	            "Changed the about window design, added a link to the icon set",
+				"Pressing Enter in one of the fields in the preferences saves the changes"
+			]
+		},
+        {
+			"name": "25/09/2012: Version 1.1.0 released",
+			"list_bugfixes": [
+				"Improved stability and exception handling",
+	            "Create inbox now working without a restart when main directory has been changed",
+	            "Icon list now non-floatable",
+	            "Tray icon double click to display inboxes replaced with single click",
+	            "Improved install and uninstall scripts with clearer messages for the user",
+	            "Improved README and manuals"
+			],
+			"list_features": [
+				"Support for uploading to Matterhorn Version 1.3 in addition to Matterhorn Version 1.4+",
+	            "New option to select whether to start MHRI as a service or as an application",
+	            "New function: 'Delete Inbox'",
+	            "New function: 'Delete Recording'",
+	            "Added a desktop shortcut to start MHRI from within the desktop",
+	            "Moving a file not contained in a folder inside an inbox in a newly created folder inside the inbox"
+			]
+		},
+        {
+			"name": "12/09/2012: Version 1.0.1 released",
+			"list_bugfixes": [
+				"Improved network exception handling",
+	            "Updated and added an information message to the install and uninstall scripts",
+	            "Restricted button availability (e.g. you can't select 'Delete Inbox' when a recording is currently selected)",
+	            "Changed borders of the UI",
+	            "Fixed 'date bug'",
+	            "Improved README and manuals",
+	            "Added a fallback for a Matterhorn Version 1.4 REST endpoint"
+			],
+			"list_features": [
+				"Colored in the different status in the UI"
+			]
+		},
+        {
+			"name": "09/08/2012: Version 1.0.0 released",
+			"list_bugfixes": [
+			],
+			"list_features": [
+			]
+		}
+	],
+	"information1": "The Matterhorn Remote Inbox (MHRI) is a tool which simplifies the collaboration between external hardware and the <a href='http://opencast.org/matterhorn' target='_blank'>Opencast Matterhorn Project</a>.<br /><br />MHRI has an easy-to-use graphical user interface to manage and upload recordings. At the first start an arbitrary main directory is being set up, which is then, including every contained and future files and directories, being watched. The sub-directories get the status of an 'Inbox' which stands for a series in Matterhorn. Every change of one of the inboxes is being registered. When e.g. a new recording has been created - that means a new directory has been created in one of the inboxes - the new recording will be marked for later upload and processing after no new changes occurred. The graphical user interface displays among other features the status of the recordings on the machine and on the server. Besides there are functions for planning, stopping and repeating the process and for the creation and modification of series on the server. Workflows can be assigned and different editors are available.",
+	"information2": "The Matterhorn Remote Inbox qualifies to work together with <a href='http://zentrum.virtuos.uos.de/therec' target='_blank'>TheRec Matterhorn</a>. TheRec Matterhorn is able to record videos synchronously from multiple sources. When TheRec Matterhorn directly records into one of the Inboxes, all changes will be registered and uploaded by MHRI after the recording has finished.<br /><br />MHRI was developed by the currently active developer <a href='mailto:calltopower88@gmail.com'>Denis Meyer</a> and the former developer Benjamin Wulff. Organizations behind: <a href='http://www.elan-ev.de' target='_blank'>ELAN e.V.</a>, <a href='http://www.virtuos.uni-osnabrueck.de' target='_blank'>virtUOS</a>, <a href='http://www.uni-osnabrueck.de' target='_blank'>University of Osnabrueck</a>."
+}

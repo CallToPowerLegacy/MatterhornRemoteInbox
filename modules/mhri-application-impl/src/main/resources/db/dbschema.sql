@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS Inbox (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, path varchar NOT NULL, name varchar NULL, seriesId varchar NULL, workflowId varchar NULL);
+CREATE TABLE IF NOT EXISTS Recording (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, state varchar NOT NULL, inbox int NOT NULL, path varchar NOT NULL, mediapackage varchar NULL, seriesId varchar NULL, workflowId varchar NULL, trimFlag int NOT NULL);
+CREATE TABLE IF NOT EXISTS File (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, recording int NOT NULL, uploadJob int NULL, path varchar NOT NULL, type varchar NULL, flavor varchar NULL);
+CREATE TABLE IF NOT EXISTS UploadJob (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, file int NOT NULL, jobId varchar NOT NULL, state varchar NOT NULL, chunkSize bigint NOT NULL, chunksTotal bigint NOT NULL, currentChunk bigint NOT NULL);

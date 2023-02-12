@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <artifactId>mhri-application-impl</artifactId>
+    <name>MHRI Application Implementation</name>
+    <groupId>de.calltopower.mhri</groupId>
+    <packaging>bundle</packaging>
+    <version>1.8.0</version>
+  
+    <parent>
+        <groupId>de.calltopower.mhri</groupId>
+        <artifactId>base</artifactId>
+    <version>1.8.0</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+  
+    <dependencies>
+        <dependency>
+            <groupId>de.calltopower.mhri</groupId>
+            <artifactId>mhri-util</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.calltopower.mhri</groupId>
+            <artifactId>mhri-application-api</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>de.calltopower.mhri</groupId>
+            <artifactId>mhri-directorywatch-api</artifactId>
+            <version>${project.version}</version>                    
+        </dependency>
+        <dependency>
+            <groupId>de.calltopower.mhri</groupId>
+            <artifactId>mhri-ingestclient-api</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>de.calltopower.mhri</groupId>
+            <artifactId>mhri-updater</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.calltopower.mhri</groupId>
+            <artifactId>mhri-logsender</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.185</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <!-- Generate Declarative Service Descriptor -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-scr-scrdescriptor</id>
+                        <goals>
+                            <goal>scr</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Generate OSGi Bundle -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Import-Package>
+                            *;resolution:=optional
+                        </Import-Package>
+                        <Embed-Dependency>
+                            h2;inline=true
+                        </Embed-Dependency>
+                        <Export-Package>
+                            de.calltopower.mhri.application.impl;version=${project.version}
+                        </Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

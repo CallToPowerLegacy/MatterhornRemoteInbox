@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Matterhorn Remote Inbox</title>
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+		<div id="wrap">
+			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a id="btn_information" class="navbar-brand" href="#information"><img id="icon" src="img/logo.png" width="45" /></a>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li id="btn_news"><a href="#news"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;<span class="lang_news">News</span></a></li>
+								<li id="btn_features"><a href="#features"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;<span class="lang_features">Features</span></a></li>
+								<li id="btn_download"><a href="#download"><i class="glyphicon glyphicon-download"></i>&nbsp;<span class="lang_download">Download</span></a></li>
+								<li id="btn_faq"><a href="#faq"><i class="glyphicon glyphicon-comment"></i>&nbsp;<span class="lang_faq_short">FAQ</span></a></li>
+								<li id="btn_register"><a href="#register"><i class="glyphicon glyphicon-pencil"></i>&nbsp;<span class="lang_register">Register</span></a></li>
+								<li id="btn_contact"><a href="#contact"><i class="glyphicon glyphicon-envelope"></i>&nbsp;<span class="lang_contact">Contact</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="container container-fluid">
+				<noscript>
+					<div class="alert alert-danger" role="alert">
+						<i class="glyphicon glyphicon-wrench"></i>
+						JavaScript is not enabled in your browser.<br/>
+						Please <a href="http://www.enable-javascript.com" class="alert-link" target="_blank">enable JavaScript</a> to display the content of this site correctly.
+					</div>
+				</noscript>
+					
+				<div id="initial_spinner">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                          <span class="lang_loading">Loading</span>...
+                      </div>
+                    </div>
+				</div>
+                
+				<div class="newsAlert">
+                    <div id="newsAlert_content" class="alert alert-danger" role="alert"></div>
+				</div>
+				
+				<div id="content">
+					<div id="information">
+						<h1><span class="lang_information">Information</span></h1>
+						<div id="information_over_content" class="jumbotron">
+						    <div id="information1_content"><span class="lang_loading">Loading</span>...</div>
+						    <div id="screenshots_content"><span class="lang_loading">Loading</span>...</div>
+						    <div id="information2_content"><span class="lang_loading">Loading</span>...</div>
+                        </div>
+					</div>
+					<div id="news">
+						<h1><span class="lang_news">News</span></h1>
+						<div id="news_content"><span class="lang_loading">Loading</span>...</div>
+					</div>
+					<div id="features">
+						<h1><span class="lang_features">Features</span></h1>
+						<div id="features_content" class="jumbotron"><span class="lang_loading">Loading</span>...</div>
+				    </div>
+					<div id="download">
+						<h1><span class="lang_download">Download</span></h1>
+						<div id="download_content" class="jumbotron">
+    						<span id="downloads_currentWindowsData1" class="download"></span>
+    						<p id="downloads_currentWindowsData2" style="font-weight:bold;text-align:center"><span class="lang_loading">Loading</span>...</p>
+    						<span id="downloads_currentCrossData1" class="download"></span>
+    						<p id="downloads_currentCrossData2" style="font-weight:bold;text-align:center"><span class="lang_loading">Loading</span>...</p>
+    						<span id="downloads_betaData1" class="download"></span>
+    						<p id="downloads_betaData2" style="font-weight:bold;text-align:center"><span class="lang_loading">Loading</span>...</p>
+    						<br />
+    						<div id="download_metadata">
+                                <div id="systemRequirements">
+    							    <h3><span class="lang_systemRequirements">System Requirements</span></h3>
+    							    <div id="systemRequirements_content"></div>
+                                </div>
+                                <div id="serverRequirements">
+    							    <h3><span class="lang_serverRequirements">Server Requirements</span></h3>
+    							    <div id="serverRequirements_content"></div>
+                                </div>
+                                <div id="changelog">
+    							    <h3>Changelog</h3>
+    							    <div id="changelog_content"></div>
+                                </div>
+                                <div id="oldVersionDownloads">
+        							<h3><span class="lang_oldVersions">Old versions</span></h3>
+        							<div>
+        								<ul id="downloads_oldData"></ul>
+                                    </div>
+                                </div>
+                                <div id="eula">
+    							    <h3><span class="lang_eula">EULA</span></h3>
+    							    <div id="eula_content"></div>
+                                </div>
+    						</div>
+						</div>
+					</div>
+					<div id="faq">
+						<h1><span class="lang_faq">Frequently Asked Questions (FAQ)</span></h1>
+						<div id="faq_content"><span class="lang_loading">Loading</span>...</div>
+					</div>
+					<div id="register">
+						<h1><span class="lang_register">Register</span></h1>
+						<div id="register_content" class="jumbotron">
+							<form class="form-horizontal" action="MAILTO:mh.remote.inbox@gmail.com" enctype="text/plain" method="post">
+								<fieldset>
+									<!-- Text input-->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="name"><span class="lang_name">Name</span>:</label>  
+										<div class="col-md-4">
+											<input id="name" name="name" placeholder="Your name" class="form-control input-md" required="" type="text">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="name"><span class="lang_organization">Organization</span>:</label>  
+										<div class="col-md-4">
+											<input id="organization" name="organization" placeholder="Your organization" class="form-control input-md" required="" type="text">
+										</div>
+									</div>
+									<!-- Select Basic -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="subject"><span class="lang_subject">Subject</span>:</label>
+										<div class="col-md-4">
+											<select id="subject" name="subject" class="form-control">
+												<option value="Register MHRI">Register MHRI</option>
+											</select>
+										</div>
+									</div>
+									<!-- Textarea -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="message"><span class="lang_mhriKey">MHRI key</span>:</label>
+										<div class="col-md-4">                     
+											<textarea class="form-control" placeholder="Your MHRI key" id="key" name="key" required=""></textarea>
+										</div>
+									</div>
+									<!-- Button -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="send"><span class="lang_send">Send</span></label>
+										<div class="col-md-4">
+											<button id="send_register" class="btn btn-primary" type="submit"><span class="lang_send">Send</span></button>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div id="contact">
+						<h1><span class="lang_contact">Contact</span></h1>
+						<div id="contact_content" class="jumbotron">
+							<form class="form-horizontal" action="MAILTO:mh.remote.inbox@gmail.com" enctype="text/plain" method="post">
+								<fieldset>
+									<!-- Text input-->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="name"><span class="lang_name">Name</span>:</label>  
+										<div class="col-md-4">
+											<input id="name" name="name" placeholder="Your name" class="form-control input-md" required="" type="text">
+										</div>
+									</div>
+									<!-- Select Basic -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="subject"><span class="lang_subject">Subject</span>:</label>
+										<div class="col-md-4">
+											<select id="subject" name="subject" class="form-control">
+												<option value="General">General</option>
+												<option value="Operating System">Operating System</option>
+												<option value="Misc">Misc</option>
+											</select>
+										</div>
+									</div>
+									<!-- Textarea -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="message">Message/Question:</label>
+										<div class="col-md-4">                     
+											<textarea class="form-control" placeholder="Your Message or Question" id="message" name="message" required=""></textarea>
+										</div>
+									</div>
+									<!-- Button -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="send"><span class="lang_send">Send</span></label>
+										<div class="col-md-4">
+											<button id="send_contact" class="btn btn-primary" type="submit"><span class="lang_send">Send</span></button>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+			    </div>
+			</div>
+			<div id="push"></div>
+		</div>
+		
+		<div id="footer">
+			<div class="container">
+				<p class="muted credit">
+					MHRI - Matterhorn Remote Inbox<br />&copy; 2014 <a href="http://elan-ev.de" target="_blank">ELAN e.V.</a>
+                    <span class="language">
+                        <a href="index.html?lang=german" id="lang_ger" class="lang_link"><img src="img/lang/ger.jpg" /></a>
+                        <a href="index.html?lang=english" id="lang_en" class="lang_link"><img src="img/lang/en.jpg" /></a>
+                    </span>
+    			</p>
+			</div>
+		</div>
+    </body>
+</html>
